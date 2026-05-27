@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 320" role="img" aria-labelledby="arch-title">
+  <title id="arch-title">kizamiの構成。設定をもとにスケジューラが先読みでクリックを予約して発音し、鳴った刻みは画面の振り子と拍ランプへ、タップは判定へ渡って成績に集計される。</title>
+  <style>
+    .box { fill: #fffdf9; stroke: #e6e0d4; stroke-width: 1.5; }
+    .name { fill: #221f1a; font: 600 15px system-ui, sans-serif; }
+    .label { fill: #6d685e; font: 12.5px system-ui, sans-serif; }
+    .edge { stroke: #b3aa97; stroke-width: 1.6; fill: none; marker-end: url(#a); }
+    #a path { fill: #b3aa97; }
+    @media (prefers-color-scheme: dark) {
+      .box { fill: #211e17; stroke: #322e24; }
+      .name { fill: #ece7db; }
+      .label { fill: #9c9686; }
+      .edge { stroke: #5f5847; }
+      #a path { fill: #5f5847; }
+    }
+  </style>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" />
+    </marker>
+  </defs>
+
+  <rect class="box" x="36" y="120" width="160" height="80" rx="13" />
+  <text class="name" x="116" y="152" text-anchor="middle">設定</text>
+  <text class="label" x="116" y="173" text-anchor="middle">テンポ・拍子・分割</text>
+
+  <rect class="box" x="252" y="116" width="180" height="88" rx="13" />
+  <text class="name" x="342" y="148" text-anchor="middle">スケジューラ</text>
+  <text class="label" x="342" y="169" text-anchor="middle">先読みでクリックを予約</text>
+  <text class="label" x="342" y="187" text-anchor="middle">(engine.ts)</text>
+
+  <rect class="box" x="488" y="36" width="170" height="74" rx="13" />
+  <text class="name" x="573" y="66" text-anchor="middle">発音</text>
+  <text class="label" x="573" y="87" text-anchor="middle">Web Audioのクリック</text>
+
+  <rect class="box" x="488" y="210" width="170" height="74" rx="13" />
+  <text class="name" x="573" y="240" text-anchor="middle">振り子・拍ランプ</text>
+  <text class="label" x="573" y="261" text-anchor="middle">鳴った刻みで動く</text>
+
+  <rect class="box" x="708" y="210" width="160" height="74" rx="13" />
+  <text class="name" x="788" y="240" text-anchor="middle">タップ判定</text>
+  <text class="label" x="788" y="261" text-anchor="middle">ずれと成績(timing.ts)</text>
+
+  <path class="edge" d="M196 160 H248" />
+  <path class="edge" d="M432 140 Q462 130 486 96" />
+  <path class="edge" d="M432 180 Q462 210 486 240" />
+  <path class="edge" d="M658 247 H704" />
+</svg>
