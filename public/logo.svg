@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="logo-title">
+  <title id="logo-title">kizami - メトロノームのロゴ</title>
+  <style>
+    .bg { fill: #f4f1ec; }
+    .body { stroke: #221f1a; }
+    .arm { stroke: #d9772b; }
+    .bob { fill: #d9772b; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #17150f; }
+      .body { stroke: #ece7db; }
+      .arm { stroke: #ec9148; }
+      .bob { fill: #ec9148; }
+    }
+  </style>
+  <rect class="bg" width="128" height="128" rx="28" />
+  <g fill="none" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <path class="body" d="M48 30 H80 L94 100 H34 Z" />
+    <path class="arm" d="M64 92 L84 40" />
+  </g>
+  <circle class="bob" cx="84" cy="40" r="8" />
+</svg>
