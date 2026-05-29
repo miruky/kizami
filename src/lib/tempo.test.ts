@@ -1,10 +1,28 @@
 import { describe, expect, it } from 'vitest';
-import { barDuration, beatInterval, tickPlan } from './tempo';
+import { barDuration, beatInterval, tempoMarking, tickPlan } from './tempo';
 
 describe('beatInterval / barDuration', () => {
   it('120 BPMは1拍0.5秒', () => {
     expect(beatInterval(120)).toBeCloseTo(0.5, 6);
     expect(barDuration(120, 4)).toBeCloseTo(2, 6);
+  });
+});
+
+describe('tempoMarking', () => {
+  it('BPMの帯に対応する速度標語を返す', () => {
+    expect(tempoMarking(50)).toBe('Largo');
+    expect(tempoMarking(90)).toBe('Andante');
+    expect(tempoMarking(120)).toBe('Moderato');
+    expect(tempoMarking(140)).toBe('Allegro');
+  });
+
+  it('境界値は下側の標語に含める', () => {
+    expect(tempoMarking(60)).toBe('Largo');
+    expect(tempoMarking(61)).toBe('Larghetto');
+  });
+
+  it('最速域はPrestissimo', () => {
+    expect(tempoMarking(240)).toBe('Prestissimo');
   });
 });
 
