@@ -1,17 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 320" role="img" aria-labelledby="arch-title">
   <title id="arch-title">kizamiの構成。設定をもとにスケジューラが先読みでクリックを予約して発音し、鳴った刻みは画面の振り子と拍ランプへ、タップは判定へ渡って成績に集計される。</title>
   <style>
-    .box { fill: #fffdf9; stroke: #e6e0d4; stroke-width: 1.5; }
-    .name { fill: #221f1a; font: 600 15px system-ui, sans-serif; }
-    .label { fill: #6d685e; font: 12.5px system-ui, sans-serif; }
-    .edge { stroke: #b3aa97; stroke-width: 1.6; fill: none; marker-end: url(#a); }
-    #a path { fill: #b3aa97; }
+    .box { fill: none; stroke: #c9bca3; stroke-width: 1.4; }
+    .name { fill: #26241f; font: 600 15px system-ui, sans-serif; }
+    .label { fill: #6f6859; font: 12.5px system-ui, sans-serif; }
+    .edge { stroke: #b3a892; stroke-width: 1.5; fill: none; marker-end: url(#a); }
+    #a path { fill: #b3a892; }
     @media (prefers-color-scheme: dark) {
-      .box { fill: #211e17; stroke: #322e24; }
-      .name { fill: #ece7db; }
-      .label { fill: #9c9686; }
-      .edge { stroke: #5f5847; }
-      #a path { fill: #5f5847; }
+      .box { stroke: #4a443a; }
+      .name { fill: #ece6da; }
+      .label { fill: #998f7d; }
+      .edge { stroke: #5a564c; }
+      #a path { fill: #5a564c; }
     }
   </style>
   <defs>
