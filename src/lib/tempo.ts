@@ -11,6 +11,26 @@ export function barDuration(bpm: number, beatsPerBar: number): number {
   return beatInterval(bpm) * beatsPerBar;
 }
 
+// 速度標語の上限BPM(その値まで)と名称。慣用的な区切りに寄せている。
+const TEMPO_MARKINGS: ReadonlyArray<readonly [number, string]> = [
+  [40, 'Grave'],
+  [60, 'Largo'],
+  [66, 'Larghetto'],
+  [76, 'Adagio'],
+  [108, 'Andante'],
+  [120, 'Moderato'],
+  [168, 'Allegro'],
+  [200, 'Presto'],
+];
+
+/** BPMに対応するイタリア語の速度標語を返す。 */
+export function tempoMarking(bpm: number): string {
+  for (const [max, name] of TEMPO_MARKINGS) {
+    if (bpm <= max) return name;
+  }
+  return 'Prestissimo';
+}
+
 export interface Tick {
   /** 連番(0始まり) */
   index: number;
