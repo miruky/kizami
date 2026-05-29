@@ -1,15 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="logo-title">
   <title id="logo-title">kizami - メトロノームのロゴ</title>
   <style>
-    .bg { fill: #f4f1ec; }
-    .body { stroke: #221f1a; }
-    .arm { stroke: #d9772b; }
-    .bob { fill: #d9772b; }
+    .bg { fill: #f3efe7; }
+    .body { stroke: #26241f; }
+    .arm { stroke: #9c6f2a; }
+    .bob { fill: #9c6f2a; }
     @media (prefers-color-scheme: dark) {
-      .bg { fill: #17150f; }
-      .body { stroke: #ece7db; }
-      .arm { stroke: #ec9148; }
-      .bob { fill: #ec9148; }
+      .bg { fill: #1b1916; }
+      .body { stroke: #ece6da; }
+      .arm { stroke: #d6a559; }
+      .bob { fill: #d6a559; }
     }
   </style>
   <rect class="bg" width="128" height="128" rx="28" />
