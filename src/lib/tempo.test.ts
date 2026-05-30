@@ -59,4 +59,12 @@ describe('tickPlan', () => {
     const ticks = tickPlan(120, 4, 1, 0, 1, 4);
     expect(ticks[0]).toMatchObject({ posInBar: 0, accent: true });
   });
+
+  it('六連(分割6)は拍頭だけstrongで、6刻みで1拍進む', () => {
+    const ticks = tickPlan(60, 2, 6, 0, 12); // 60BPM・1拍1秒・6分割
+    expect(ticks.filter((t) => t.strong).map((t) => t.index)).toEqual([0, 6]);
+    expect(ticks[1]!.time).toBeCloseTo(1 / 6, 6);
+    expect(ticks.map((t) => t.beat)).toEqual([0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1]);
+    expect(ticks[0]!.accent).toBe(true);
+  });
 });
