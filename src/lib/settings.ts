@@ -17,7 +17,7 @@ export interface Settings {
 }
 
 export const SOUNDS: readonly ClickSound[] = ['click', 'wood', 'beep'];
-export const SUBDIVISIONS: readonly number[] = [1, 2, 3, 4];
+export const SUBDIVISIONS: readonly number[] = [1, 2, 3, 4, 6, 8];
 
 export const RANGE = {
   bpm: { min: 30, max: 300 },

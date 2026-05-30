@@ -32,6 +32,12 @@ describe('isSettings / deserialize', () => {
     ).toBeNull();
     expect(deserializeSettings(JSON.stringify({ ...defaultSettings(), sound: 'gong' }))).toBeNull();
   });
+
+  it('六連・三十二分の分割を受け付ける', () => {
+    for (const subdivision of [6, 8]) {
+      expect(isSettings({ ...defaultSettings(), subdivision })).toBe(true);
+    }
+  });
 });
 
 describe('normalizeSettings', () => {
