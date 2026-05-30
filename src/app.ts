@@ -29,6 +29,8 @@ const SUBDIVISION_LABEL: Record<number, string> = {
   2: '八分',
   3: '三連',
   4: '十六分',
+  6: '六連',
+  8: '三十二分',
 };
 const SOUND_LABEL: Record<ClickSound, string> = {
   click: 'クリック',
